@@ -2,36 +2,71 @@ import React from 'react';
 
 function Hero() {
   return (
-    <section 
-      id="home" 
-      className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{ 
-        // Updated to a stunning high-res view of Kalamata, Greece
-        backgroundImage: `url('https://cdn.getyourguide.com/img/location/5a1d572e4a065.jpeg/99.jpg')` 
-      }}
-    >
-      {/* Premium Dark Overlay to keep text perfectly legible */}
-      <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-[1px]" />
-
-      {/* Hero Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl">
-        <span className="text-xs md:text-sm font-semibold tracking-widest text-amber-400 uppercase mb-3 block animate-fade-in delay-100">
-          Welcome to the Messinian Gulf
-        </span>
-        <h1 className="text-4xl md:text-7xl font-serif font-light text-white tracking-wide mb-6 leading-tight">
-          A Sanctuary for the <br />
-          <span className="font-normal italic text-amber-100">Modern Traveler</span>
+    <section className="bg-[#2c3820] px-6 md:px-12 py-20 md:py-[72px] grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[380px]">
+      <div className="hero-content">
+        <p className="text-[11px] tracking-[0.12em] text-[#a8b98a] uppercase mb-4 font-semibold">Kalamata, Greece</p>
+        <h1 className="font-serif text-4xl md:text-[42px] font-normal leading-[1.15] text-[#f0ebe0] mb-5">
+          Still life,<br /><em className="text-[#a8b98a] not-italic">slow living.</em>
         </h1>
-        <p className="text-base md:text-xl text-slate-100 font-light max-w-2xl mx-auto mb-8 tracking-wide">
-          Experience world-class luxury, breathtaking Greek horizons, and refined comfort right on the coast.
+        <p className="text-[15px] text-[#c4bfaf] line-height-[1.7] mb-8 max-w-[380px] font-light">
+          A collection of studio apartments in the heart of Kalamata — surrounded by olive groves, mountain air, and the unhurried pace of Messinian life.
         </p>
+        <div className="flex gap-3 flex-wrap">
+          <button className="bg-[#a8b98a] text-[#1e2a12] border-none px-6 py-3 rounded-lg text-[14px] cursor-pointer font-medium hover:bg-[#97a879] transition-colors">
+            Explore studios
+          </button>
+          <button className="bg-transparent text-[#f0ebe0] border border-[#a8b98a] px-6 py-3 rounded-lg text-[14px] cursor-pointer hover:bg-white/5 transition-colors">
+            Our story
+          </button>
+        </div>
+      </div>
+      
+      {/* Hero Visual Mockup Cards */}
+      <div className="flex flex-col gap-3 items-end w-full">
+        <div className="w-full max-w-[280px] bg-[#3d4f28] rounded-xl overflow-hidden border border-[#5a7040]">
+          <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg" className="w-full h-[130px] block">
+            <rect width="280" height="130" fill="#4a5e35"/>
+            <rect width="280" height="70" fill="#6a7e50"/>
+            <polygon points="0,70 60,30 120,70" fill="#3a4e25"/>
+            <polygon points="80,70 150,20 220,70" fill="#4a5e35"/>
+            <polygon points="160,70 230,35 280,70" fill="#3a4e25"/>
+            <rect y="70" width="280" height="60" fill="#2c3820"/>
+            <rect x="130" y="45" width="4" height="30" fill="#5a4020" rx="2"/>
+            <ellipse cx="132" cy="42" rx="16" ry="12" fill="#7a8c5e"/>
+            <ellipse cx="120" cy="48" rx="10" ry="8" fill="#8a9e6e"/>
+            <ellipse cx="144" cy="46" rx="12" ry="9" fill="#6a7e50"/>
+            <rect x="30" y="50" width="70" height="30" fill="#e8e0d0" rx="2"/>
+            <rect x="35" y="55" width="14" height="18" fill="#4a5e35" rx="1"/>
+            <rect x="55" y="55" width="14" height="18" fill="#4a5e35" rx="1"/>
+            <rect x="76" y="55" width="14" height="18" fill="#4a5e35" rx="1"/>
+            <circle cx="240" cy="22" r="14" fill="#f0d080" opacity="0.8"/>
+          </svg>
+          <div className="p-3.5">
+            <p className="text-[11px] color-[#a8b98a] tracking-wider uppercase mb-1">Featured</p>
+            <p className="font-serif text-[15px] text-[#f0ebe0]">Elia Studio Suite</p>
+            <p className="text-[13px] text-[#c4bfaf] mt-1.5">from <strong className="text-[#a8b98a] font-semibold">€85</strong> / night</p>
+          </div>
+        </div>
         
-        <a 
-          href="#rooms" 
-          className="inline-block bg-amber-600 hover:bg-amber-500 text-white font-medium text-xs tracking-widest uppercase px-8 py-4 transition-all duration-300 hover:tracking-[0.15em] rounded-sm shadow-lg"
-        >
-          Explore Suites
-        </a>
+        <div className="flex gap-2.5 items-center bg-[#3d4f28] rounded-lg p-[10px_14px] border border-[#5a7040] max-w-[280px] w-full">
+          <div className="w-8 h-8 rounded-full bg-[#a8b98a] flex items-center justify-center flex-shrink-0">
+            <i className="ti ti-star-filled text-[14px] text-[#2c3820]"></i>
+          </div>
+          <div className="text-[12px] text-[#c4bfaf]">
+            <strong className="block text-[13px] text-[#f0ebe0] font-medium mb-0.5">4.9 on Booking.com</strong>
+            Loved for calm, cleanliness & location
+          </div>
+        </div>
+
+        <div className="flex gap-2.5 items-center bg-[#3d4f28] rounded-lg p-[10px_14px] border border-[#5a7040] max-w-[280px] w-full">
+          <div className="w-8 h-8 rounded-full bg-[#c4bfaf] flex items-center justify-center flex-shrink-0">
+            <i className="ti ti-leaf text-[14px] text-[#2c3820]"></i>
+          </div>
+          <div className="text-[12px] text-[#c4bfaf]">
+            <strong className="block text-[13px] text-[#f0ebe0] font-medium mb-0.5">Olive country stays</strong>
+            2 km from the city centre
+          </div>
+        </div>
       </div>
     </section>
   );

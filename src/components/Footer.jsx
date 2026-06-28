@@ -2,40 +2,42 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer id="about" className="bg-slate-900 text-white pt-20 pb-10 px-6 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-        
-        {/* Column 1: Brand Statement */}
+    <footer className="bg-[#f5f3ee] border-t border-[#e0ddd6] px-6 md:px-12 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-8 mb-8">
         <div>
-          <h3 className="text-xl font-serif tracking-widest text-amber-400 mb-4">Kalamata Views</h3>
-          <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-            Crafting unforgettable stays where refined architecture meets bespoke hospitality. Your coastal sanctuary awaits.
+          <p className="font-serif text-[18px] text-[#1a1a18] mb-2.5">
+            olea <span className="text-[#7a8c5e]">living</span>
+          </p>
+          <p className="text-[13px] text-[#6b6b64] line-height-[1.6] max-w-[220px] font-light">
+            Slow stays in the heart of Messinia. Studios designed for those who travel with intention.
           </p>
         </div>
 
-        {/* Column 2: Quick Links */}
         <div>
-          <h4 className="text-xs font-semibold tracking-widest uppercase text-slate-300 mb-4">Explore</h4>
-          <ul className="space-y-2 text-sm text-slate-400">
-            <li><a href="#home" className="hover:text-amber-400 transition-colors">Back to Top</a></li>
-            <li><a href="#rooms" className="hover:text-amber-400 transition-colors">Our Suites</a></li>
-            <li><a href="#amenities" className="hover:text-amber-400 transition-colors">Resort Experience</a></li>
-          </ul>
+          <h4 className="text-[12px] font-medium text-[#1a1a18] tracking-wider uppercase mb-3.5">Studios</h4>
+          {["Karpos Studio", "Elia Suite", "Petra Family"].map((link) => (
+            <a key={link} href="#" className="block text-[13px] text-[#6b6b64] hover:text-[#1a1a18] mb-2 font-light transition-colors">{link}</a>
+          ))}
         </div>
 
-        {/* Column 3: Contact Channels */}
         <div>
-          <h4 className="text-xs font-semibold tracking-widest uppercase text-slate-300 mb-4">Contact Info</h4>
-          <p className="text-sm text-slate-400 mb-2">📍 102 Horizon Boulevard, Coastal Crest</p>
-          <p className="text-sm text-slate-400 mb-2">📞 +31 (0) 15 278 9111</p>
-          <p className="text-sm text-slate-400">✉️ reservations@grandhorizon.com</p>
+          <h4 className="text-[12px] font-medium text-[#1a1a18] tracking-wider uppercase mb-3.5">Explore</h4>
+          {["Kalamata", "Mani peninsula", "Things to do", "Local food"].map((link) => (
+            <a key={link} href="#" className="block text-[13px] text-[#6b6b64] hover:text-[#1a1a18] mb-2 font-light transition-colors">{link}</a>
+          ))}
         </div>
 
+        <div>
+          <h4 className="text-[12px] font-medium text-[#1a1a18] tracking-wider uppercase mb-3.5">Info</h4>
+          {["Book direct", "Policies", "FAQ", "Contact us"].map((link) => (
+            <a key={link} href="#" className="block text-[13px] text-[#6b6b64] hover:text-[#1a1a18] mb-2 font-light transition-colors">{link}</a>
+          ))}
+        </div>
       </div>
 
-      {/* Sub-footer Copyright */}
-      <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Kalamata Views Hotel. Designed with precision.</p>
+      <div className="border-t border-[#e0ddd6] pt-5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-[12px] text-[#9b9b92]">© 2025 Olea Living, Kalamata. All rights reserved.</p>
+        <p className="text-[12px] text-[#9b9b92] font-light">Made with care in Messinia</p>
       </div>
     </footer>
   );
