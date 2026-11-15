@@ -7,7 +7,7 @@ function Rooms() {
     <section id="studios" className="px-6 md:px-12 py-14">
       <div className="text-center mb-10">
         <p className="text-[11px] tracking-[0.12em] text-leaf-600 uppercase mb-2.5 font-semibold">Our spaces</p>
-        <h2 className="font-serif text-[28px] font-normal text-ink">Three kinds of studio</h2>
+        <h2 className="font-serif text-[28px] font-normal text-ink">Our studios</h2>
         <p className="text-[15px] text-muted mt-2.5 max-w-[480px] mx-auto leading-[1.7] font-light">
           Every studio is self-contained, with its own kitchen. Choose the kind that suits your stay.
         </p>
