@@ -36,7 +36,7 @@ function Footer() {
             <Logo />
           </div>
           <p className="text-[13px] text-muted leading-[1.6] max-w-[220px] font-light">
-            Three studio apartments in Kalamata, Messinia.
+            Studio apartments in Kalamata, Messinia.
           </p>
         </div>
 
