@@ -2,6 +2,7 @@
 // Anything left empty is hidden on the page.
 const siteConfig = {
   name: 'Olea Living',
+  opening: 'Summer 2027', // set to '' once open to hide the opening notices
   email: '', // e.g. stay@olealiving.gr — booking enquiries are sent here
   phone: '', // e.g. +30 272 100 0000
   address: '', // street address, shown in the contact section
