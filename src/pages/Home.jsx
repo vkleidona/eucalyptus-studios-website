@@ -3,6 +3,7 @@ import Rooms from '../components/Rooms';
 import Amenities from '../components/Amenities';
 import Location from '../components/Location';
 import Contact from '../components/Contact';
+import Icon from '../components/Icon';
 
 function TrustBar() {
   const trustItems = [
@@ -17,7 +18,7 @@ function TrustBar() {
     <div className="bg-paper border-b border-line px-6 md:px-12 py-[18px] flex gap-x-10 gap-y-3 items-center justify-center flex-wrap">
       {trustItems.map((item) => (
         <div key={item.label} className="flex items-center gap-2 text-[13px] text-muted">
-          <i className={`ti ${item.icon} text-olive-500 text-[16px]`}></i> {item.label}
+          <Icon name={item.icon} className="text-olive-500 text-[16px]" /> {item.label}
         </div>
       ))}
     </div>

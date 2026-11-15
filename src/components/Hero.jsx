@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import siteConfig from '../siteConfig';
+import Icon from './Icon';
 
 
 function Hero() {
@@ -53,7 +54,7 @@ function Hero() {
         
         <div className="flex gap-2.5 items-center bg-olive-800 rounded-lg p-[10px_14px] border border-olive-600 max-w-[280px] w-full">
           <div className="w-8 h-8 rounded-full bg-olive-300 flex items-center justify-center flex-shrink-0">
-            <i className="ti ti-sparkles text-[14px] text-olive-900"></i>
+            <Icon name="ti-sparkles" className="text-[14px] text-olive-900" />
           </div>
           <div className="text-[12px] text-sand">
             <strong className="block text-[13px] text-cream font-medium mb-0.5">Brand-new studios</strong>
@@ -63,7 +64,7 @@ function Hero() {
 
         <div className="flex gap-2.5 items-center bg-olive-800 rounded-lg p-[10px_14px] border border-olive-600 max-w-[280px] w-full">
           <div className="w-8 h-8 rounded-full bg-sand flex items-center justify-center flex-shrink-0">
-            <i className="ti ti-leaf text-[14px] text-olive-900"></i>
+            <Icon name="ti-leaf" className="text-[14px] text-olive-900" />
           </div>
           <div className="text-[12px] text-sand">
             <strong className="block text-[13px] text-cream font-medium mb-0.5">Olive country stays</strong>

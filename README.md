@@ -1,6 +1,6 @@
-# Olea Living
+# Eucalyptus Studios
 
-Website for Olea Living, a collection of studio apartments in Kalamata, Greece.
+Website for Eucalyptus Studios, a collection of studio apartments in Kalamata, Greece.
 
 Built with React, Vite and Tailwind CSS. Deployed on Vercel: every push to `main` goes live, and other branches get a preview link.
 
@@ -19,8 +19,12 @@ npm run lint
 - `src/data/studios.jsx`: studio names, prices, descriptions and photos. Each studio gets its own page at `/studios/<id>`.
 - `src/data/amenities.js`: amenities shown on the home page and every studio page.
 - `src/index.css`: the colour palette (`@theme`). Change a colour there and it updates everywhere.
-- `src/pages/`: Home, StudioPage and NotFound.
+- `src/pages/`: Home, StudioPage, Privacy and NotFound.
 - `src/components/`: page sections and shared pieces (EnquiryForm, NotifySignup, ...).
+
+## Icons
+
+Icons come from [Tabler](https://tabler.io/icons). Only the ones listed in `src/components/Icon.jsx` are included; add a new icon there before using it.
 
 ## Forms
 

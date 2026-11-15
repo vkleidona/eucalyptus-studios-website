@@ -1,6 +1,7 @@
 import siteConfig from '../siteConfig';
 import EnquiryForm from './EnquiryForm';
 import NotifySignup from './NotifySignup';
+import Icon from './Icon';
 
 function ContactDetails() {
   const details = [
@@ -18,7 +19,7 @@ function ContactDetails() {
       {details.map((d) => (
         <div key={d.icon} className="flex gap-3 items-center">
           <div className="w-9 h-9 rounded-full bg-olive-50 flex items-center justify-center flex-shrink-0">
-            <i className={`ti ${d.icon} text-[16px] text-olive-700`}></i>
+            <Icon name={d.icon} className="text-[16px] text-olive-700" />
           </div>
           {d.href ? (
             <a href={d.href} className="text-[14px] text-ink hover:text-olive-700">{d.label}</a>

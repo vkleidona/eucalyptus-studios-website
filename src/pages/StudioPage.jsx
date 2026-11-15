@@ -5,6 +5,7 @@ import amenities from '../data/amenities';
 import siteConfig from '../siteConfig';
 import EnquiryForm from '../components/EnquiryForm';
 import NotFound from './NotFound';
+import Icon from '../components/Icon';
 
 const PLACEHOLDER_TILES = 4;
 
@@ -23,7 +24,7 @@ function Gallery({ studio }) {
             key={i}
             className="hidden md:flex rounded-xl bg-paper border border-dashed border-line items-center justify-center flex-col gap-1.5 text-faint"
           >
-            <i className="ti ti-photo text-[22px]"></i>
+            <Icon name="ti-photo" className="text-[22px]" />
             <span className="text-[11px] tracking-wider uppercase">Photos coming soon</span>
           </div>
         ))}
@@ -75,7 +76,7 @@ function StudioPage() {
   return (
     <main className="px-6 md:px-12 py-8 max-w-6xl mx-auto">
       <Link to="/#studios" className="inline-flex items-center gap-1.5 text-[13px] text-muted hover:text-ink mb-6">
-        <i className="ti ti-arrow-left"></i> All studios
+        <Icon name="ti-arrow-left" /> All studios
       </Link>
 
       <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
@@ -89,8 +90,8 @@ function StudioPage() {
           <h1 className="font-serif text-[32px] md:text-[40px] font-normal text-ink leading-tight">{studio.name}</h1>
         </div>
         <div className="flex gap-5 text-[14px] text-muted">
-          <span className="flex items-center gap-1.5"><i className="ti ti-users text-olive-500"></i> {studio.guests}</span>
-          <span className="flex items-center gap-1.5"><i className="ti ti-ruler-2 text-olive-500"></i> {studio.size}</span>
+          <span className="flex items-center gap-1.5"><Icon name="ti-users" className="text-olive-500" /> {studio.guests}</span>
+          <span className="flex items-center gap-1.5"><Icon name="ti-ruler-2" className="text-olive-500" /> {studio.size}</span>
         </div>
       </div>
 
@@ -114,7 +115,7 @@ function StudioPage() {
             {amenities.map((a) => (
               <div key={a.name} className="flex gap-3 items-start">
                 <div className="w-9 h-9 rounded-full bg-olive-50 flex items-center justify-center flex-shrink-0">
-                  <i className={`ti ${a.icon} text-[16px] text-olive-700`}></i>
+                  <Icon name={a.icon} className="text-[16px] text-olive-700" />
                 </div>
                 <div>
                   <p className="text-[14px] font-medium text-ink">{a.name}</p>
@@ -131,7 +132,7 @@ function StudioPage() {
           </p>
           {siteConfig.opening && (
             <p className="text-[12px] text-olive-700 bg-olive-50 rounded-lg px-3 py-2 mt-3 flex items-center gap-2">
-              <i className="ti ti-calendar"></i> Opening {siteConfig.opening}
+              <Icon name="ti-calendar" /> Opening {siteConfig.opening}
             </p>
           )}
           {siteConfig.web3formsKey ? (

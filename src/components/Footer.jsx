@@ -32,7 +32,7 @@ function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-8 mb-8">
         <div>
           <p className="font-serif text-[18px] text-ink mb-2.5">
-            olea <span className="text-olive-500">living</span>
+            eucalyptus <span className="text-olive-500">studios</span>
           </p>
           <p className="text-[13px] text-muted leading-[1.6] max-w-[220px] font-light">
             Slow stays in the heart of Messinia. Studios designed for those who travel with intention.
@@ -55,7 +55,10 @@ function Footer() {
         <p className="text-[12px] text-faint">
           © {new Date().getFullYear()} {siteConfig.name}, Kalamata. All rights reserved.
         </p>
-        <p className="text-[12px] text-faint font-light">Made with care in Messinia</p>
+        <div className="flex gap-5 text-[12px] text-faint font-light">
+          <Link to="/privacy" className="hover:text-ink transition-colors">Privacy policy</Link>
+          <span>Made with care in Messinia</span>
+        </div>
       </div>
     </footer>
   );

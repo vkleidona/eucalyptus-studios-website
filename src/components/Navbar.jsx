@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Icon from './Icon';
 
 const NAV_LINKS = [
   { label: 'Studios', to: '/#studios' },
@@ -16,7 +17,7 @@ function Navbar() {
     <header className="sticky top-0 z-50 bg-white border-b border-line">
       <nav className="flex items-center justify-between px-6 md:px-12 py-[18px]">
         <Link to="/" onClick={close} className="font-serif text-[20px] font-normal tracking-wide text-ink">
-          olea <span className="text-olive-500">living</span>
+          eucalyptus <span className="text-olive-500">studios</span>
         </Link>
 
         <div className="hidden md:flex gap-7">
@@ -46,7 +47,7 @@ function Navbar() {
             aria-expanded={open}
             className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg text-ink hover:bg-paper"
           >
-            <i className={`ti ${open ? 'ti-x' : 'ti-menu-2'} text-[20px]`}></i>
+            <Icon name={open ? 'ti-x' : 'ti-menu-2'} className="text-[20px]" />
           </button>
         </div>
       </nav>

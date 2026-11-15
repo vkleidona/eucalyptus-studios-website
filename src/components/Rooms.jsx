@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import studios from '../data/studios';
+import Icon from './Icon';
 
 function Rooms() {
   return (
@@ -33,10 +34,10 @@ function Rooms() {
               <p className="text-[12px] text-muted leading-[1.5] mb-3 font-light">{studio.desc}</p>
               <div className="flex gap-3 mb-3">
                 <span className="text-[11px] text-faint flex items-center gap-1">
-                  <i className="ti ti-users text-[13px] text-olive-500"></i> {studio.guests}
+                  <Icon name="ti-users" className="text-[13px] text-olive-500" /> {studio.guests}
                 </span>
                 <span className="text-[11px] text-faint flex items-center gap-1">
-                  <i className="ti ti-ruler-2 text-[13px] text-olive-500"></i> {studio.size}
+                  <Icon name="ti-ruler-2" className="text-[13px] text-olive-500" /> {studio.size}
                 </span>
               </div>
               <div className="flex items-center justify-between pt-1 border-t border-paper">
