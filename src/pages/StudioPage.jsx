@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import studios, { getStudio } from '../data/studios';
 import amenities from '../data/amenities';
 import siteConfig from '../siteConfig';
 import EnquiryForm from '../components/EnquiryForm';
 import NotFound from './NotFound';
+import usePageMeta from '../lib/usePageMeta';
 import Icon from '../components/Icon';
 
 const PLACEHOLDER_TILES = 4;
@@ -62,12 +63,11 @@ function StudioPage() {
   const { id } = useParams();
   const studio = getStudio(id);
 
-  useEffect(() => {
-    if (studio) document.title = `${studio.name} | ${siteConfig.name}, Kalamata`;
-    return () => {
-      document.title = `${siteConfig.name} | Studio Apartments in Kalamata, Greece`;
-    };
-  }, [studio]);
+  usePageMeta({
+    title: studio ? `${studio.name}, Kalamata` : null,
+    description: studio ? `${studio.name}: ${studio.desc} ${studio.guests}, ${studio.size}, from ${studio.price} per night.` : null,
+    path: studio ? `/studios/${studio.id}` : null,
+  });
 
   if (!studio) return <NotFound />;
 
@@ -90,8 +90,8 @@ function StudioPage() {
           <h1 className="font-serif text-[32px] md:text-[40px] font-normal text-ink leading-tight">{studio.name}</h1>
         </div>
         <div className="flex gap-5 text-[14px] text-muted">
-          <span className="flex items-center gap-1.5"><Icon name="ti-users" className="text-olive-500" /> {studio.guests}</span>
-          <span className="flex items-center gap-1.5"><Icon name="ti-ruler-2" className="text-olive-500" /> {studio.size}</span>
+          <span className="flex items-center gap-1.5"><Icon name="ti-users" className="text-olive-600" /> {studio.guests}</span>
+          <span className="flex items-center gap-1.5"><Icon name="ti-ruler-2" className="text-olive-600" /> {studio.size}</span>
         </div>
       </div>
 

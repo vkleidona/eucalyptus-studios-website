@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from './Icon';
 
@@ -13,11 +13,19 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
 
+  // Close the mobile menu with the Escape key.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => e.key === 'Escape' && setOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-line">
       <nav className="flex items-center justify-between px-6 md:px-12 py-[18px]">
         <Link to="/" onClick={close} className="font-serif text-[20px] font-normal tracking-wide text-ink">
-          eucalyptus <span className="text-olive-500">studios</span>
+          eucalyptus <span className="text-olive-600">studios</span>
         </Link>
 
         <div className="hidden md:flex gap-7">
