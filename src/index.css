@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+/* Brand palette — change a colour here and it updates across the whole site. */
+@theme {
+  --color-ink: #1a1a18;
+  --color-muted: #6b6b64;
+  --color-faint: #9b9b92;
+  --color-line: #e0ddd6;
+  --color-paper: #f5f3ee;
+  --color-linen: #faf9f6;
+  --color-cream: #f0ebe0;
+  --color-sand: #c4bfaf;
+  --color-clay: #e0d8c8;
+
+  --color-olive-50: #eef1e8;
+  --color-olive-100: #e8ead8;
+  --color-olive-200: #d8e0c8;
+  --color-olive-300: #a8b98a;
+  --color-olive-400: #97a879;
+  --color-olive-500: #7a8c5e;
+  --color-olive-600: #5a7040;
+  --color-olive-700: #4a5e35;
+  --color-olive-800: #3d4f28;
+  --color-olive-900: #2c3820;
+  --color-olive-950: #1e2a12;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keep section headings visible below the sticky navbar when jumping to an anchor. */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}

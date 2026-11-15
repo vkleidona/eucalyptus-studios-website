@@ -1,13 +1,13 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Rooms from './components/Rooms';
 import Amenities from './components/Amenities';
 import Location from './components/Location';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function TrustBar() {
-  const corporateTrusts = [
+  const trustItems = [
     { icon: "ti-star", label: "4.9 avg rating" },
     { icon: "ti-shield-check", label: "Free cancellation" },
     { icon: "ti-wifi", label: "Fast Wi-Fi in all studios" },
@@ -16,10 +16,10 @@ function TrustBar() {
   ];
 
   return (
-    <div className="bg-[#f5f3ee] border-b border-[#e0ddd6] px-6 md:px-12 py-[18px] flex gap-10 items-center justify-center flex-wrap">
-      {corporateTrusts.map((item, index) => (
-        <div key={index} className="flex items-center gap-2 text-[13px] text-[#6b6b64]">
-          <i className={`ti ${item.icon} text-[#7a8c5e] text-[16px]`}></i> {item.label}
+    <div className="bg-paper border-b border-line px-6 md:px-12 py-[18px] flex gap-x-10 gap-y-3 items-center justify-center flex-wrap">
+      {trustItems.map((item) => (
+        <div key={item.label} className="flex items-center gap-2 text-[13px] text-muted">
+          <i className={`ti ${item.icon} text-olive-500 text-[16px]`}></i> {item.label}
         </div>
       ))}
     </div>
@@ -28,13 +28,14 @@ function TrustBar() {
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-[#1a1a18]">
+    <div className="min-h-screen bg-linen text-ink">
       <Navbar />
       <Hero />
       <TrustBar />
       <Rooms />
       <Amenities />
       <Location />
+      <Contact />
       <Footer />
     </div>
   );
