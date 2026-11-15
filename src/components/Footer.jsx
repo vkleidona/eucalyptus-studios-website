@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import siteConfig from '../siteConfig';
+import Logo from './Logo';
 
 const COLUMNS = [
   {
@@ -31,11 +32,11 @@ function Footer() {
     <footer className="bg-paper border-t border-line px-6 md:px-12 py-10">
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-8 mb-8">
         <div>
-          <p className="font-serif text-[18px] text-ink mb-2.5">
-            eucalyptus <span className="text-olive-600">studios</span>
-          </p>
+          <div className="mb-4">
+            <Logo />
+          </div>
           <p className="text-[13px] text-muted leading-[1.6] max-w-[220px] font-light">
-            Slow stays in the heart of Messinia. Studios designed for those who travel with intention.
+            Three studio apartments in Kalamata, Messinia.
           </p>
         </div>
 

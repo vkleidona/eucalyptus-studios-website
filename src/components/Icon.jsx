@@ -64,7 +64,7 @@ const ICONS = {
   'ti-x': IconX,
 };
 
-// Sized with the text: a class like text-[16px] sets the icon size, text-olive-700 its colour.
+// Sized with the text: a class like text-[16px] sets the icon size, text-leaf-700 its colour.
 function Icon({ name, className = '' }) {
   const Svg = ICONS[name];
   if (!Svg) return null;

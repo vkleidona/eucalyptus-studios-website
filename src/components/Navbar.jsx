@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from './Icon';
+import Logo from './Logo';
 
 const NAV_LINKS = [
   { label: 'Studios', to: '/#studios' },
@@ -23,9 +24,9 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-line">
-      <nav className="flex items-center justify-between px-6 md:px-12 py-[18px]">
-        <Link to="/" onClick={close} className="font-serif text-[20px] font-normal tracking-wide text-ink">
-          eucalyptus <span className="text-olive-600">studios</span>
+      <nav className="flex items-center justify-between px-6 md:px-12 py-4">
+        <Link to="/" onClick={close} aria-label="Eucalyptus Studios, home" className="rounded-md">
+          <Logo />
         </Link>
 
         <div className="hidden md:flex gap-7">
@@ -44,7 +45,7 @@ function Navbar() {
           <Link
             to="/#contact"
             onClick={close}
-            className="text-[13px] bg-olive-700 text-cream px-[18px] py-2 rounded-lg tracking-wide hover:bg-olive-800 transition-colors"
+            className="text-[13px] bg-leaf-700 text-cream px-[18px] py-2 rounded-lg tracking-wide hover:bg-leaf-800 transition-colors"
           >
             Book now
           </Link>

@@ -8,7 +8,7 @@ import Icon from './Icon';
 const NOT_SURE = 'Not sure yet';
 
 export const inputClass =
-  'w-full bg-white border border-line rounded-lg px-3.5 py-2.5 text-[14px] text-ink placeholder:text-faint focus:outline-none focus:border-olive-500';
+  'w-full bg-white border border-line rounded-lg px-3.5 py-2.5 text-[14px] text-ink placeholder:text-faint focus:outline-none focus:border-leaf-500';
 const labelClass = 'block text-[12px] text-muted mb-1.5';
 
 function EnquiryForm({ defaultStudio }) {
@@ -66,8 +66,8 @@ function EnquiryForm({ defaultStudio }) {
   if (!siteConfig.web3formsKey) {
     return (
       <div className="bg-linen border border-line rounded-xl p-8 text-center flex flex-col items-center gap-3">
-        <div className="w-12 h-12 rounded-full bg-olive-50 flex items-center justify-center">
-          <Icon name="ti-calendar" className="text-[22px] text-olive-700" />
+        <div className="w-12 h-12 rounded-full bg-leaf-50 flex items-center justify-center">
+          <Icon name="ti-calendar" className="text-[22px] text-leaf-700" />
         </div>
         <p className="font-serif text-[20px] text-ink">Enquiries open soon</p>
         <p className="text-[14px] text-muted font-light max-w-[380px]">
@@ -80,14 +80,14 @@ function EnquiryForm({ defaultStudio }) {
   if (status === 'sent') {
     return (
       <div className="bg-linen border border-line rounded-xl p-8 text-center flex flex-col items-center justify-center gap-3">
-        <div className="w-12 h-12 rounded-full bg-olive-50 flex items-center justify-center">
-          <Icon name="ti-mail-check" className="text-[22px] text-olive-700" />
+        <div className="w-12 h-12 rounded-full bg-leaf-50 flex items-center justify-center">
+          <Icon name="ti-mail-check" className="text-[22px] text-leaf-700" />
         </div>
         <p className="font-serif text-[20px] text-ink">Thank you, your enquiry is on its way</p>
         <p className="text-[14px] text-muted font-light max-w-[360px]">
           We'll reply to your email as soon as possible. Keep an eye on your spam folder just in case.
         </p>
-        <button type="button" onClick={() => setStatus('idle')} className="text-[13px] text-olive-700 underline mt-2">
+        <button type="button" onClick={() => setStatus('idle')} className="text-[13px] text-leaf-700 underline mt-2">
           Send another enquiry
         </button>
       </div>
@@ -149,7 +149,7 @@ function EnquiryForm({ defaultStudio }) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="sm:col-span-2 bg-olive-700 text-cream px-6 py-3 rounded-lg text-[14px] font-medium hover:bg-olive-800 transition-colors disabled:opacity-60 disabled:cursor-wait"
+        className="sm:col-span-2 bg-leaf-700 text-cream px-6 py-3 rounded-lg text-[14px] font-medium hover:bg-leaf-800 transition-colors disabled:opacity-60 disabled:cursor-wait"
       >
         {status === 'sending' ? 'Sending…' : 'Send enquiry'}
       </button>

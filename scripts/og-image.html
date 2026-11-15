@@ -5,35 +5,27 @@
 <head>
 <meta charset="utf-8" />
 <style>
+  @font-face { font-family: 'Cormorant'; font-weight: 500; src: url(../node_modules/@fontsource/cormorant/files/cormorant-latin-500-normal.woff2); }
+  @font-face { font-family: 'Commissioner'; font-weight: 400; src: url(../node_modules/@fontsource/commissioner/files/commissioner-latin-400-normal.woff2); }
+  @font-face { font-family: 'Commissioner'; font-weight: 600; src: url(../node_modules/@fontsource/commissioner/files/commissioner-latin-600-normal.woff2); }
   html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
-  body {
-    background: #2c3820; color: #f0ebe0; font-family: Georgia, 'Times New Roman', serif;
-    display: flex; align-items: center; position: relative;
-  }
-  .text { padding-left: 96px; z-index: 1; }
-  .eyebrow { font-family: Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 22px; letter-spacing: 0.18em; text-transform: uppercase; color: #a8b98a; font-weight: 600; margin-bottom: 28px; }
-  h1 { font-weight: 400; font-size: 92px; line-height: 1.02; margin: 0 0 30px; }
-  h1 span { color: #a8b98a; }
-  .sub { font-family: Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 28px; color: #c4bfaf; font-weight: 300; }
-  svg { position: absolute; right: 70px; top: 50%; transform: translateY(-50%); }
-  .frame { position: absolute; inset: 28px; border: 1.5px solid #5a7040; border-radius: 22px; }
+  body { background: #eef0eb; color: #1f2e2a; display: flex; align-items: center; justify-content: center; position: relative; font-family: 'Commissioner', Arial, sans-serif; }
+  .frame { position: absolute; inset: 28px; border: 1.5px solid #c9d4cf; border-radius: 28px; }
+  .lockup { display: flex; align-items: center; gap: 40px; }
+  .word { font-family: 'Cormorant', Georgia, serif; font-weight: 500; font-size: 150px; line-height: 0.85; }
+  .tag { font-weight: 600; font-size: 26px; letter-spacing: 0.28em; color: #3f5a52; margin-top: 44px; }
+  .sub { position: absolute; bottom: 70px; left: 0; right: 0; text-align: center; font-size: 26px; color: #33453f; }
 </style>
 </head>
 <body>
   <div class="frame"></div>
-  <div class="text">
-    <div class="eyebrow">Kalamata · Greece</div>
-    <h1>Eucalyptus<br /><span>Studios</span></h1>
-    <div class="sub">Studio apartments among the olive groves of Messinia</div>
+  <div class="lockup">
+    <svg width="150" height="196" viewBox="0 0 26 34"><path d="M13 33 C 12.5 24, 13.5 12, 13 2" stroke="#3f5a52" stroke-width="1.2" fill="none" stroke-linecap="round"/><ellipse cx="8" cy="25" rx="5" ry="4" fill="#7f9c92" transform="rotate(-20 8 25)"/><ellipse cx="18.5" cy="19" rx="4.6" ry="3.7" fill="#9fb5ad" transform="rotate(20 18.5 19)"/><ellipse cx="8.5" cy="12" rx="3.8" ry="3" fill="#7f9c92" transform="rotate(-20 8.5 12)"/><ellipse cx="17" cy="6" rx="2.8" ry="2.2" fill="#9fb5ad" transform="rotate(20 17 6)"/></svg>
+    <div>
+      <div class="word">Eucalyptus</div>
+      <div class="tag">STUDIOS · KALAMATA</div>
+    </div>
   </div>
-  <svg width="330" height="470" viewBox="0 0 64 92" fill="#a8b98a">
-    <path d="M32 90 C 31 70, 34 44, 32 6" stroke="#a8b98a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-    <ellipse cx="22" cy="72" rx="9" ry="7" transform="rotate(-20 22 72)"/>
-    <ellipse cx="42.5" cy="62" rx="9" ry="7" transform="rotate(20 42.5 62)" opacity="0.85"/>
-    <ellipse cx="22.5" cy="49" rx="7.5" ry="6" transform="rotate(-20 22.5 49)" opacity="0.9"/>
-    <ellipse cx="41.5" cy="37" rx="6.5" ry="5.2" transform="rotate(20 41.5 37)" opacity="0.8"/>
-    <ellipse cx="25" cy="25" rx="5.2" ry="4.2" transform="rotate(-20 25 25)" opacity="0.85"/>
-    <ellipse cx="38.5" cy="14" rx="4" ry="3.2" transform="rotate(20 38.5 14)" opacity="0.75"/>
-  </svg>
+  <div class="sub">Three studio apartments among the olive groves of Messinia</div>
 </body>
 </html>

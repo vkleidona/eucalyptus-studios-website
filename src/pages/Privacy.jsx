@@ -23,14 +23,14 @@ function Privacy() {
   });
 
   const contact = siteConfig.email ? (
-    <a href={`mailto:${siteConfig.email}`} className="text-olive-700 underline">{siteConfig.email}</a>
+    <a href={`mailto:${siteConfig.email}`} className="text-leaf-700 underline">{siteConfig.email}</a>
   ) : (
     'the contact details on our website'
   );
 
   return (
     <main className="px-6 md:px-12 py-12 max-w-3xl mx-auto">
-      <p className="text-[11px] tracking-[0.12em] text-olive-600 uppercase mb-2.5 font-semibold">Legal</p>
+      <p className="text-[11px] tracking-[0.12em] text-leaf-600 uppercase mb-2.5 font-semibold">Legal</p>
       <h1 className="font-serif text-[34px] text-ink mb-2">Privacy policy</h1>
       <p className="text-[13px] text-faint mb-8">Last updated: {LAST_UPDATED}</p>
 
