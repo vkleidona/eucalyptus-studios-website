@@ -9,7 +9,8 @@ import Privacy from './pages/Privacy';
 
 // Scroll to #section links after navigating, or to the top on a new page.
 function ScrollManager() {
-  const { pathname, hash } = useLocation();
+  // key changes on every click, so repeat clicks on the same link still scroll.
+  const { pathname, hash, key } = useLocation();
 
   useEffect(() => {
     if (hash) {
@@ -20,7 +21,7 @@ function ScrollManager() {
       }
     }
     window.scrollTo(0, 0);
-  }, [pathname, hash]);
+  }, [pathname, hash, key]);
 
   return null;
 }
