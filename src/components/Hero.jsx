@@ -34,7 +34,7 @@ function Hero() {
             <polygon points="0,70 60,30 120,70" fill="#2f4740"/>
             <polygon points="80,70 150,20 220,70" fill="#3f5a52"/>
             <polygon points="160,70 230,35 280,70" fill="#2f4740"/>
-            <rect y="70" width="280" height="60" fill="#1f2e2a"/>
+            <rect y="70" width="280" height="60" fill="#2a3d32"/>
             <rect x="130" y="45" width="4" height="30" fill="#6b5240" rx="2"/>
             <ellipse cx="132" cy="42" rx="16" ry="12" fill="#9fb5ad"/>
             <ellipse cx="120" cy="48" rx="10" ry="8" fill="#b4c6bf"/>

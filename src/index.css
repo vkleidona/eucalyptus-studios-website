@@ -27,9 +27,9 @@
   --color-leaf-400: #8fa79f;
   --color-leaf-500: #7f9c92; /* Eucalyptus: decoration only */
   --color-leaf-600: #3f5a52; /* Sage: accent text and links */
-  --color-leaf-700: #2a3b36;
-  --color-leaf-800: #24332f;
-  --color-leaf-900: #1f2e2a; /* Gum leaf */
+  --color-leaf-700: #2d4135;
+  --color-leaf-800: #33493c;
+  --color-leaf-900: #2a3d32; /* dark green sections (lighter, greener than Gum leaf text) */
   --color-leaf-950: #141d1a;
 }
 
