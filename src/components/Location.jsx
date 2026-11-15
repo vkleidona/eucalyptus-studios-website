@@ -1,4 +1,5 @@
-import siteConfig from '../siteConfig';
+import ConsentMap from './ConsentMap';
+import Icon from './Icon';
 
 function Location() {
   const points = [
@@ -20,21 +21,13 @@ function Location() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
-        <div className="rounded-xl border border-line overflow-hidden h-[300px] shadow-sm bg-olive-100">
-          <iframe
-            title="Map of our location"
-            src={`https://www.google.com/maps?q=${encodeURIComponent(siteConfig.mapQuery)}&output=embed`}
-            className="w-full h-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+        <ConsentMap />
 
         <div className="flex flex-col gap-4">
           {points.map((pt) => (
             <div key={pt.title} className="flex gap-3.5 items-start">
               <div className="w-9 h-9 rounded-full bg-olive-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <i className={`ti ${pt.icon} text-[16px] text-olive-700`}></i>
+                <Icon name={pt.icon} className="text-[16px] text-olive-700" />
               </div>
               <div>
                 <p className="text-[14px] font-medium text-ink mb-0.5">{pt.title}</p>

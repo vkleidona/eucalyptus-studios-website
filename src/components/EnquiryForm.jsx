@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import studios from '../data/studios';
 import siteConfig from '../siteConfig';
 import { sendForm } from '../lib/sendForm';
+import Icon from './Icon';
 
 const NOT_SURE = 'Not sure yet';
 
@@ -65,7 +67,7 @@ function EnquiryForm({ defaultStudio }) {
     return (
       <div className="bg-linen border border-line rounded-xl p-8 text-center flex flex-col items-center gap-3">
         <div className="w-12 h-12 rounded-full bg-olive-50 flex items-center justify-center">
-          <i className="ti ti-calendar text-[22px] text-olive-700"></i>
+          <Icon name="ti-calendar" className="text-[22px] text-olive-700" />
         </div>
         <p className="font-serif text-[20px] text-ink">Enquiries open soon</p>
         <p className="text-[14px] text-muted font-light max-w-[380px]">
@@ -79,7 +81,7 @@ function EnquiryForm({ defaultStudio }) {
     return (
       <div className="bg-linen border border-line rounded-xl p-8 text-center flex flex-col items-center justify-center gap-3">
         <div className="w-12 h-12 rounded-full bg-olive-50 flex items-center justify-center">
-          <i className="ti ti-mail-check text-[22px] text-olive-700"></i>
+          <Icon name="ti-mail-check" className="text-[22px] text-olive-700" />
         </div>
         <p className="font-serif text-[20px] text-ink">Thank you, your enquiry is on its way</p>
         <p className="text-[14px] text-muted font-light max-w-[360px]">
@@ -151,6 +153,10 @@ function EnquiryForm({ defaultStudio }) {
       >
         {status === 'sending' ? 'Sending…' : 'Send enquiry'}
       </button>
+      <p className="sm:col-span-2 text-[11px] text-faint text-center -mt-1">
+        We only use your details to reply to your enquiry. See our{' '}
+        <Link to="/privacy" className="underline hover:text-muted">privacy policy</Link>.
+      </p>
     </form>
   );
 }

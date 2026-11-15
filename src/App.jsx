@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import StudioPage from './pages/StudioPage';
 import NotFound from './pages/NotFound';
+import Privacy from './pages/Privacy';
 
 // Scroll to #section links after navigating, or to the top on a new page.
 function ScrollManager() {
@@ -32,6 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/studios/:id" element={<StudioPage />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

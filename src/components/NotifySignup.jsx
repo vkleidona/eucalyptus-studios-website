@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import siteConfig from '../siteConfig';
 import { sendForm } from '../lib/sendForm';
 import { inputClass } from './EnquiryForm';
+import Icon from './Icon';
 
 function NotifySignup() {
   const [email, setEmail] = useState('');
@@ -34,7 +36,7 @@ function NotifySignup() {
       </p>
       {status === 'sent' ? (
         <p className="text-[13px] text-olive-300 flex items-center gap-2">
-          <i className="ti ti-check"></i> You're on the list. See you soon!
+          <Icon name="ti-check" /> You're on the list. See you soon!
         </p>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
@@ -56,6 +58,10 @@ function NotifySignup() {
           >
             {status === 'sending' ? 'Signing up…' : 'Notify me'}
           </button>
+          <p className="text-[11px] text-sand/80 leading-[1.5]">
+            One email when bookings open, nothing else. Unsubscribe any time.{' '}
+            <Link to="/privacy" className="underline hover:text-cream">Privacy policy</Link>
+          </p>
           {status === 'error' && (
             <p className="text-[12px] text-red-300">Something went wrong. Please try again.</p>
           )}
