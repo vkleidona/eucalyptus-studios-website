@@ -10,7 +10,7 @@ function ConsentMap() {
 
   if (loaded) {
     return (
-      <div className="rounded-xl border border-line overflow-hidden h-[300px] shadow-sm bg-olive-100">
+      <div className="rounded-xl border border-line overflow-hidden h-[300px] shadow-sm bg-leaf-100">
         <iframe
           title="Map of our location"
           src={`https://www.google.com/maps?q=${query}&output=embed`}
@@ -23,15 +23,15 @@ function ConsentMap() {
   }
 
   return (
-    <div className="rounded-xl border border-line h-[300px] shadow-sm bg-olive-100 flex flex-col items-center justify-center gap-3 p-6 text-center">
+    <div className="rounded-xl border border-line h-[300px] shadow-sm bg-leaf-100 flex flex-col items-center justify-center gap-3 p-6 text-center">
       <div className="w-12 h-12 rounded-full bg-white/70 flex items-center justify-center">
-        <Icon name="ti-map-pin" className="text-[22px] text-olive-700" />
+        <Icon name="ti-map-pin" className="text-[22px] text-leaf-700" />
       </div>
       <p className="font-serif text-[17px] text-ink">{siteConfig.mapQuery}</p>
       <button
         type="button"
         onClick={() => setLoaded(true)}
-        className="bg-olive-700 text-cream px-5 py-2.5 rounded-lg text-[13px] font-medium hover:bg-olive-800 transition-colors"
+        className="bg-leaf-700 text-cream px-5 py-2.5 rounded-lg text-[13px] font-medium hover:bg-leaf-800 transition-colors"
       >
         Show map
       </button>

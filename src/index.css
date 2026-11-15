@@ -1,28 +1,36 @@
 @import "tailwindcss";
 
-/* Brand palette — change a colour here and it updates across the whole site. */
+/* Eucalyptus Studios brand (see brand guide). Change a value here and it updates everywhere. */
 @theme {
-  --color-ink: #1a1a18;
-  --color-muted: #5c5c56;
-  --color-faint: #6e6e67;
-  --color-line: #e0ddd6;
-  --color-paper: #f5f3ee;
-  --color-linen: #faf9f6;
-  --color-cream: #f0ebe0;
-  --color-sand: #c4bfaf;
-  --color-clay: #e0d8c8;
+  /* Fonts: Cormorant only for the logo; EB Garamond and Commissioner also cover Greek. */
+  --font-logo: 'Cormorant', 'EB Garamond', Georgia, serif;
+  --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Commissioner', 'Helvetica Neue', Arial, sans-serif;
 
-  --color-olive-50: #eef1e8;
-  --color-olive-100: #e8ead8;
-  --color-olive-200: #d8e0c8;
-  --color-olive-300: #a8b98a;
-  --color-olive-400: #97a879;
-  --color-olive-500: #7a8c5e;
-  --color-olive-600: #5a7040;
-  --color-olive-700: #4a5e35;
-  --color-olive-800: #3d4f28;
-  --color-olive-900: #2c3820;
-  --color-olive-950: #1e2a12;
+  /* Neutrals */
+  --color-ink: #1f2e2a; /* Gum leaf: main text */
+  --color-muted: #33453f; /* body text */
+  --color-faint: #4a5e57; /* small print */
+  --color-line: #c9d4cf; /* Silver leaf: lines */
+  --color-paper: #dfe5e1; /* Mist: section bands */
+  --color-linen: #eef0eb; /* Chalk: page background */
+  --color-cream: #eef0eb; /* Chalk, for text on dark backgrounds */
+  --color-sand: #c9d4cf; /* Silver leaf, for softer text on dark */
+  --color-clay: #e4ddd2;
+  --color-bark: #8a5a3b; /* rare warm accent: prices */
+
+  /* Eucalyptus greens, light to dark */
+  --color-leaf-50: #e6ece8;
+  --color-leaf-100: #dfe5e1;
+  --color-leaf-200: #c9d4cf;
+  --color-leaf-300: #9fb5ad;
+  --color-leaf-400: #8fa79f;
+  --color-leaf-500: #7f9c92; /* Eucalyptus: decoration only */
+  --color-leaf-600: #3f5a52; /* Sage: accent text and links */
+  --color-leaf-700: #2a3b36;
+  --color-leaf-800: #24332f;
+  --color-leaf-900: #1f2e2a; /* Gum leaf */
+  --color-leaf-950: #141d1a;
 }
 
 html {
@@ -36,7 +44,7 @@ section[id] {
 
 /* Clear focus ring for keyboard users (mouse clicks don't show it). */
 :focus-visible {
-  outline: 2px solid var(--color-olive-600);
+  outline: 2px solid var(--color-leaf-600);
   outline-offset: 2px;
   border-radius: 4px;
 }

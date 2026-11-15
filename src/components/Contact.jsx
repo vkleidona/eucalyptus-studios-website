@@ -18,11 +18,11 @@ function ContactDetails() {
       <p className="font-serif text-[18px] text-ink">Get in touch</p>
       {details.map((d) => (
         <div key={d.icon} className="flex gap-3 items-center">
-          <div className="w-9 h-9 rounded-full bg-olive-50 flex items-center justify-center flex-shrink-0">
-            <Icon name={d.icon} className="text-[16px] text-olive-700" />
+          <div className="w-9 h-9 rounded-full bg-leaf-50 flex items-center justify-center flex-shrink-0">
+            <Icon name={d.icon} className="text-[16px] text-leaf-700" />
           </div>
           {d.href ? (
-            <a href={d.href} className="text-[14px] text-ink hover:text-olive-700">{d.label}</a>
+            <a href={d.href} className="text-[14px] text-ink hover:text-leaf-700">{d.label}</a>
           ) : (
             <span className="text-[14px] text-ink">{d.label}</span>
           )}
@@ -40,7 +40,7 @@ function Contact() {
   return (
     <section id="contact" className="bg-paper px-6 md:px-12 py-14">
       <div className="text-center mb-10">
-        <p className="text-[11px] tracking-[0.12em] text-olive-600 uppercase mb-2.5 font-semibold">Book direct</p>
+        <p className="text-[11px] tracking-[0.12em] text-leaf-600 uppercase mb-2.5 font-semibold">Book direct</p>
         <h2 className="font-serif text-[28px] font-normal text-ink">Plan your stay</h2>
         <p className="text-[15px] text-muted mt-2.5 max-w-[480px] mx-auto leading-[1.7] font-light">
           {siteConfig.opening && !siteConfig.web3formsKey

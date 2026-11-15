@@ -29,13 +29,13 @@ function NotifySignup() {
   };
 
   return (
-    <div className="bg-olive-900 rounded-xl p-5 text-cream">
+    <div className="bg-leaf-900 rounded-xl p-5 text-cream">
       <p className="font-serif text-[17px] mb-1">Be the first to know</p>
       <p className="text-[13px] text-sand font-light leading-[1.6] mb-4">
         We open in {siteConfig.opening.toLowerCase()}. Leave your email and we'll let you know when bookings open.
       </p>
       {status === 'sent' ? (
-        <p className="text-[13px] text-olive-300 flex items-center gap-2">
+        <p className="text-[13px] text-leaf-300 flex items-center gap-2">
           <Icon name="ti-check" /> You're on the list. See you soon!
         </p>
       ) : (
@@ -54,7 +54,7 @@ function NotifySignup() {
           <button
             type="submit"
             disabled={status === 'sending'}
-            className="bg-olive-300 text-olive-950 px-4 py-2.5 rounded-lg text-[14px] font-medium hover:bg-olive-400 transition-colors disabled:opacity-60"
+            className="bg-leaf-300 text-leaf-950 px-4 py-2.5 rounded-lg text-[14px] font-medium hover:bg-leaf-400 transition-colors disabled:opacity-60"
           >
             {status === 'sending' ? 'Signing up…' : 'Notify me'}
           </button>
