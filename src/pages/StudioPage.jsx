@@ -134,31 +134,39 @@ function StudioPage() {
               <i className="ti ti-calendar"></i> Opening {siteConfig.opening}
             </p>
           )}
-          <a
-            href="#enquire"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('enquire')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="block text-center bg-olive-700 text-cream px-6 py-3 rounded-lg text-[14px] font-medium hover:bg-olive-800 transition-colors mt-4"
-          >
-            Enquire about this studio
-          </a>
-          <p className="text-[12px] text-faint text-center mt-3">No payment needed to enquire</p>
+          {siteConfig.web3formsKey ? (
+            <a
+              href="#enquire"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('enquire')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="block text-center bg-olive-700 text-cream px-6 py-3 rounded-lg text-[14px] font-medium hover:bg-olive-800 transition-colors mt-4"
+            >
+              Enquire about this studio
+            </a>
+          ) : (
+            <p className="text-[13px] text-muted text-center mt-4">Enquiries open soon</p>
+          )}
+          {siteConfig.web3formsKey && (
+            <p className="text-[12px] text-faint text-center mt-3">No payment needed to enquire</p>
+          )}
         </aside>
       </div>
 
-      <section id="enquire" className="mt-14">
-        <h2 className="font-serif text-[24px] text-ink mb-1.5">Enquire about {studio.name}</h2>
-        <p className="text-[14px] text-muted font-light mb-5">
-          {siteConfig.opening
-            ? `Send us your dates and we'll be in touch as soon as bookings open for ${siteConfig.opening.toLowerCase()}.`
-            : "Send us your dates and we'll reply with availability and the best rate."}
-        </p>
-        <div className="max-w-3xl">
-          <EnquiryForm key={studio.id} defaultStudio={studio.name} />
-        </div>
-      </section>
+      {siteConfig.web3formsKey && (
+        <section id="enquire" className="mt-14">
+          <h2 className="font-serif text-[24px] text-ink mb-1.5">Enquire about {studio.name}</h2>
+          <p className="text-[14px] text-muted font-light mb-5">
+            {siteConfig.opening
+              ? `Send us your dates and we'll be in touch as soon as bookings open for ${siteConfig.opening.toLowerCase()}.`
+              : "Send us your dates and we'll reply with availability and the best rate."}
+          </p>
+          <div className="max-w-3xl">
+            <EnquiryForm key={studio.id} defaultStudio={studio.name} />
+          </div>
+        </section>
+      )}
 
       <section className="mt-16 mb-6">
         <h2 className="font-serif text-[22px] text-ink mb-4">Other studios</h2>

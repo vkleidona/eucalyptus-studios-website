@@ -32,24 +32,38 @@ function ContactDetails() {
 }
 
 function Contact() {
+  const hasContactDetails = Boolean(siteConfig.email || siteConfig.phone || siteConfig.address || siteConfig.instagram);
+  const hasSignup = Boolean(siteConfig.opening && siteConfig.web3formsKey);
+  const hasSidebar = hasContactDetails || hasSignup;
+
   return (
     <section id="contact" className="bg-paper px-6 md:px-12 py-14">
       <div className="text-center mb-10">
         <p className="text-[11px] tracking-[0.12em] text-olive-500 uppercase mb-2.5 font-semibold">Book direct</p>
         <h2 className="font-serif text-[28px] font-normal text-ink">Plan your stay</h2>
         <p className="text-[15px] text-muted mt-2.5 max-w-[480px] mx-auto leading-[1.7] font-light">
-          {siteConfig.opening
+          {siteConfig.opening && !siteConfig.web3formsKey
+            ? `We open in ${siteConfig.opening.toLowerCase()}.`
+            : siteConfig.opening
             ? `We open in ${siteConfig.opening.toLowerCase()}. Send us your dates and we'll be in touch as soon as bookings open.`
             : "Send us your dates and we'll get back to you with availability and the best rate."}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 max-w-5xl mx-auto items-start">
+      <div
+        className={
+          hasSidebar
+            ? 'grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 max-w-5xl mx-auto items-start'
+            : 'max-w-2xl mx-auto'
+        }
+      >
         <EnquiryForm />
-        <div className="flex flex-col gap-6">
-          <NotifySignup />
-          <ContactDetails />
-        </div>
+        {hasSidebar && (
+          <div className="flex flex-col gap-6">
+            <NotifySignup />
+            <ContactDetails />
+          </div>
+        )}
       </div>
     </section>
   );

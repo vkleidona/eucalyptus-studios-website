@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import studios from '../data/studios';
+import siteConfig from '../siteConfig';
 import { sendForm } from '../lib/sendForm';
 
 const NOT_SURE = 'Not sure yet';
@@ -58,6 +59,21 @@ function EnquiryForm({ defaultStudio }) {
       setStatus('error');
     }
   };
+
+  // Until a Web3Forms key is added in siteConfig, show a notice instead of a form that can't send.
+  if (!siteConfig.web3formsKey) {
+    return (
+      <div className="bg-linen border border-line rounded-xl p-8 text-center flex flex-col items-center gap-3">
+        <div className="w-12 h-12 rounded-full bg-olive-50 flex items-center justify-center">
+          <i className="ti ti-calendar text-[22px] text-olive-700"></i>
+        </div>
+        <p className="font-serif text-[20px] text-ink">Enquiries open soon</p>
+        <p className="text-[14px] text-muted font-light max-w-[380px]">
+          We're putting the finishing touches on the studios. Check back soon to send us your dates.
+        </p>
+      </div>
+    );
+  }
 
   if (status === 'sent') {
     return (

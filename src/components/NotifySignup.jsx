@@ -7,7 +7,7 @@ function NotifySignup() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
 
-  if (!siteConfig.opening) return null;
+  if (!siteConfig.opening || !siteConfig.web3formsKey) return null;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
