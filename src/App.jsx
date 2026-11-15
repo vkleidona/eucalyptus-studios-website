@@ -1,41 +1,39 @@
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Rooms from './components/Rooms';
-import Amenities from './components/Amenities';
-import Location from './components/Location';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import StudioPage from './pages/StudioPage';
+import NotFound from './pages/NotFound';
 
-function TrustBar() {
-  const trustItems = [
-    { icon: "ti-sparkles", label: "Brand-new studios" },
-    { icon: "ti-discount-check", label: "Book direct for the best rate" },
-    { icon: "ti-shield-check", label: "Free cancellation" },
-    { icon: "ti-wifi", label: "Fast Wi-Fi in all studios" },
-    { icon: "ti-coffee", label: "Welcome olive oil basket" },
-  ];
+// Scroll to #section links after navigating, or to the top on a new page.
+function ScrollManager() {
+  const { pathname, hash } = useLocation();
 
-  return (
-    <div className="bg-paper border-b border-line px-6 md:px-12 py-[18px] flex gap-x-10 gap-y-3 items-center justify-center flex-wrap">
-      {trustItems.map((item) => (
-        <div key={item.label} className="flex items-center gap-2 text-[13px] text-muted">
-          <i className={`ti ${item.icon} text-olive-500 text-[16px]`}></i> {item.label}
-        </div>
-      ))}
-    </div>
-  );
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
+
+  return null;
 }
 
 function App() {
   return (
     <div className="min-h-screen bg-linen text-ink">
+      <ScrollManager />
       <Navbar />
-      <Hero />
-      <TrustBar />
-      <Rooms />
-      <Amenities />
-      <Location />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/studios/:id" element={<StudioPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
     </div>
   );

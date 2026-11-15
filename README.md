@@ -15,6 +15,24 @@ npm run lint
 
 ## Where things live
 
-- `src/siteConfig.js`: business details (email, phone, address, map location). Empty fields are hidden on the site.
+- `src/siteConfig.js`: business details (form key, email, phone, address, map location, opening date). Empty fields are hidden on the site.
+- `src/data/studios.jsx`: studio names, prices, descriptions and photos. Each studio gets its own page at `/studios/<id>`.
+- `src/data/amenities.js`: amenities shown on the home page and every studio page.
 - `src/index.css`: the colour palette (`@theme`). Change a colour there and it updates everywhere.
-- `src/components/`: one file per page section (Navbar, Hero, Rooms, Amenities, Location, Contact, Footer).
+- `src/pages/`: Home, StudioPage and NotFound.
+- `src/components/`: page sections and shared pieces (EnquiryForm, NotifySignup, ...).
+
+## Forms
+
+Enquiries and "notify me" sign-ups are sent through [Web3Forms](https://web3forms.com) to the email linked to `web3formsKey`.
+
+## Adding studio photos
+
+Put the images in `public/photos/` and add a `photos` list to the studio in `src/data/studios.jsx`:
+
+```js
+photos: [
+  { src: '/photos/elia-1.jpg', alt: 'Elia living area with balcony' },
+  { src: '/photos/elia-2.jpg', alt: 'Balcony view over the olive groves' },
+],
+```

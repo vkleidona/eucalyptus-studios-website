@@ -1,26 +1,27 @@
+import { Link } from 'react-router-dom';
 import siteConfig from '../siteConfig';
 
 const COLUMNS = [
   {
     title: 'Studios',
     links: [
-      { label: 'Karpos Studio', href: '#karpos' },
-      { label: 'Elia Suite', href: '#elia' },
-      { label: 'Petra Family', href: '#petra' },
+      { label: 'Karpos Studio', href: '/studios/karpos' },
+      { label: 'Elia Suite', href: '/studios/elia' },
+      { label: 'Petra Family', href: '/studios/petra' },
     ],
   },
   {
     title: 'Explore',
     links: [
-      { label: 'Amenities', href: '#amenities' },
-      { label: 'Location', href: '#location' },
+      { label: 'Amenities', href: '/#amenities' },
+      { label: 'Location', href: '/#location' },
     ],
   },
   {
     title: 'Info',
     links: [
-      { label: 'Book direct', href: '#contact' },
-      { label: 'Contact us', href: '#contact' },
+      { label: 'Book direct', href: '/#contact' },
+      { label: 'Contact us', href: '/#contact' },
     ],
   },
 ];
@@ -42,9 +43,9 @@ function Footer() {
           <div key={col.title}>
             <h4 className="text-[12px] font-medium text-ink tracking-wider uppercase mb-3.5">{col.title}</h4>
             {col.links.map((link) => (
-              <a key={link.label} href={link.href} className="block text-[13px] text-muted hover:text-ink mb-2 font-light transition-colors">
+              <Link key={link.label} to={link.href} className="block text-[13px] text-muted hover:text-ink mb-2 font-light transition-colors">
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         ))}
