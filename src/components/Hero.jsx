@@ -46,9 +46,9 @@ function Hero() {
             <circle cx="240" cy="22" r="14" fill="#f0d080" opacity="0.8"/>
           </svg>
           <div className="p-3.5">
-            <p className="text-[11px] text-olive-300 tracking-wider uppercase mb-1">Featured</p>
+            <p className="text-[11px] text-olive-200 tracking-wider uppercase mb-1">Featured</p>
             <p className="font-serif text-[15px] text-cream">Elia Studio Suite</p>
-            <p className="text-[13px] text-sand mt-1.5">from <strong className="text-olive-300 font-semibold">€85</strong> / night</p>
+            <p className="text-[13px] text-sand mt-1.5">from <strong className="text-olive-200 font-semibold">€85</strong> / night</p>
           </div>
         </Link>
         

@@ -13,7 +13,7 @@ function Location() {
   return (
     <section id="location" className="px-6 md:px-12 py-14 bg-linen">
       <div className="text-center mb-10">
-        <p className="text-[11px] tracking-[0.12em] text-olive-500 uppercase mb-2.5 font-semibold">Where we are</p>
+        <p className="text-[11px] tracking-[0.12em] text-olive-600 uppercase mb-2.5 font-semibold">Where we are</p>
         <h2 className="font-serif text-[28px] font-normal text-ink">Rooted in the heart of Messinia</h2>
         <p className="text-[15px] text-muted mt-2.5 max-w-[480px] mx-auto leading-[1.7] font-light">
           Not on the beach — but close to everything that makes this region worth visiting.

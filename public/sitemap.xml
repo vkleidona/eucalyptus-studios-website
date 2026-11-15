@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- List of pages for search engines. Add new pages here, and update the address when moving to your own domain. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://hotel-website-rose-eight.vercel.app/</loc></url>
+  <url><loc>https://hotel-website-rose-eight.vercel.app/studios/karpos</loc></url>
+  <url><loc>https://hotel-website-rose-eight.vercel.app/studios/elia</loc></url>
+  <url><loc>https://hotel-website-rose-eight.vercel.app/studios/petra</loc></url>
+  <url><loc>https://hotel-website-rose-eight.vercel.app/privacy</loc></url>
+</urlset>

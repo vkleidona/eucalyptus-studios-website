@@ -40,3 +40,11 @@ photos: [
   { src: '/photos/elia-2.jpg', alt: 'Balcony view over the olive groves' },
 ],
 ```
+
+## Search engines and link previews
+
+- `public/og-image.png`: picture shown when the site is shared (source: `scripts/og-image.html`).
+- `public/sitemap.xml` and `public/robots.txt`: help Google find every page. Add new pages to the sitemap.
+- `index.html`: page description and hotel details for Google (the `ld+json` block).
+
+**Moving to your own domain:** update `VITE_SITE_URL` in `.env`, and the addresses in `public/robots.txt` and `public/sitemap.xml`.

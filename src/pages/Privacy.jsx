@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import siteConfig from '../siteConfig';
+import usePageMeta from '../lib/usePageMeta';
 
 const LAST_UPDATED = '15 November 2026';
 
@@ -16,12 +16,11 @@ function Li({ children }) {
 }
 
 function Privacy() {
-  useEffect(() => {
-    document.title = `Privacy policy | ${siteConfig.name}`;
-    return () => {
-      document.title = `${siteConfig.name} | Studio Apartments in Kalamata, Greece`;
-    };
-  }, []);
+  usePageMeta({
+    title: 'Privacy policy',
+    description: `How ${siteConfig.name} handles personal data from booking enquiries and sign-ups.`,
+    path: '/privacy',
+  });
 
   const contact = siteConfig.email ? (
     <a href={`mailto:${siteConfig.email}`} className="text-olive-700 underline">{siteConfig.email}</a>
@@ -31,7 +30,7 @@ function Privacy() {
 
   return (
     <main className="px-6 md:px-12 py-12 max-w-3xl mx-auto">
-      <p className="text-[11px] tracking-[0.12em] text-olive-500 uppercase mb-2.5 font-semibold">Legal</p>
+      <p className="text-[11px] tracking-[0.12em] text-olive-600 uppercase mb-2.5 font-semibold">Legal</p>
       <h1 className="font-serif text-[34px] text-ink mb-2">Privacy policy</h1>
       <p className="text-[13px] text-faint mb-8">Last updated: {LAST_UPDATED}</p>
 

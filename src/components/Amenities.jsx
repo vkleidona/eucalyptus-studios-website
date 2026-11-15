@@ -5,7 +5,7 @@ function Amenities() {
   return (
     <section id="amenities" className="bg-paper px-6 md:px-12 py-14">
       <div className="text-center mb-10">
-        <p className="text-[11px] tracking-[0.12em] text-olive-500 uppercase mb-2.5 font-semibold">Included in every stay</p>
+        <p className="text-[11px] tracking-[0.12em] text-olive-600 uppercase mb-2.5 font-semibold">Included in every stay</p>
         <h2 className="font-serif text-[28px] font-normal text-ink">Comforts of home, character of place</h2>
       </div>
       

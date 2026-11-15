@@ -19,7 +19,33 @@
       property="og:description"
       content="Brand-new studio apartments among the olive groves of Kalamata, Greece. Opening summer 2027."
     />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Eucalyptus Studios, studio apartments in Kalamata, Greece" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.png" />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+
+    <!-- Tells Google this is a place to stay in Kalamata -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Eucalyptus Studios",
+        "description": "Brand-new studio apartments in Kalamata, Messinia, surrounded by olive groves and close to the city centre, beaches and the Taygetos mountains.",
+        "url": "%VITE_SITE_URL%/",
+        "image": "%VITE_SITE_URL%/og-image.png",
+        "priceRange": "€75–€110",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kalamata",
+          "addressRegion": "Messinia",
+          "addressCountry": "GR"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

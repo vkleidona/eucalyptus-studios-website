@@ -29,13 +29,21 @@ function App() {
   return (
     <div className="min-h-screen bg-linen text-ink">
       <ScrollManager />
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-md"
+      >
+        Skip to content
+      </a>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/studios/:id" element={<StudioPage />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div id="main" tabIndex={-1} className="outline-none">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/studios/:id" element={<StudioPage />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );

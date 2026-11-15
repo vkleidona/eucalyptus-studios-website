@@ -32,7 +32,7 @@ function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-8 mb-8">
         <div>
           <p className="font-serif text-[18px] text-ink mb-2.5">
-            eucalyptus <span className="text-olive-500">studios</span>
+            eucalyptus <span className="text-olive-600">studios</span>
           </p>
           <p className="text-[13px] text-muted leading-[1.6] max-w-[220px] font-light">
             Slow stays in the heart of Messinia. Studios designed for those who travel with intention.
@@ -41,7 +41,7 @@ function Footer() {
 
         {COLUMNS.map((col) => (
           <div key={col.title}>
-            <h4 className="text-[12px] font-medium text-ink tracking-wider uppercase mb-3.5">{col.title}</h4>
+            <h2 className="text-[12px] font-medium text-ink tracking-wider uppercase mb-3.5">{col.title}</h2>
             {col.links.map((link) => (
               <Link key={link.label} to={link.href} className="block text-[13px] text-muted hover:text-ink mb-2 font-light transition-colors">
                 {link.label}

@@ -40,7 +40,7 @@ function Contact() {
   return (
     <section id="contact" className="bg-paper px-6 md:px-12 py-14">
       <div className="text-center mb-10">
-        <p className="text-[11px] tracking-[0.12em] text-olive-500 uppercase mb-2.5 font-semibold">Book direct</p>
+        <p className="text-[11px] tracking-[0.12em] text-olive-600 uppercase mb-2.5 font-semibold">Book direct</p>
         <h2 className="font-serif text-[28px] font-normal text-ink">Plan your stay</h2>
         <p className="text-[15px] text-muted mt-2.5 max-w-[480px] mx-auto leading-[1.7] font-light">
           {siteConfig.opening && !siteConfig.web3formsKey
