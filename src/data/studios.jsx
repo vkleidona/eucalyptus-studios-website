@@ -12,7 +12,7 @@ const studios = [
     maxGuests: 2,
     highlights: ["Mountain views", "Kitchenette", "Ideal for 1–2 guests"],
     about: [
-      "Karpos is our most compact studio: bright, simple and calm, with views towards the Taygetos mountains.",
+      "Karpos studios are our most compact: bright, simple and calm, with views towards the Taygetos mountains.",
       "A cosy kitchenette means you can make breakfast with local produce, and the layout keeps everything within easy reach. A comfortable base for solo travellers and couples exploring Kalamata and the Mani.",
     ],
     svg: (
@@ -47,7 +47,7 @@ const studios = [
     maxGuests: 2,
     highlights: ["Private balcony", "Olive grove views", "Separate sleeping alcove", "Full kitchen"],
     about: [
-      "Elia is our superior studio, with a larger living area and a private balcony that looks out over the olive groves.",
+      "Elia studios are a step up, with a larger living area and a private balcony that looks out over the olive groves.",
       "The sleeping alcove is set apart from the living space, and the full kitchen makes longer stays easy. Morning coffee on the balcony is the highlight.",
     ],
     svg: (
@@ -83,7 +83,7 @@ const studios = [
     maxGuests: 4,
     highlights: ["Open-plan living", "Dining area", "Sofa bed", "Suits families and longer stays"],
     about: [
-      "Petra is our largest studio, an open-plan space with a proper dining area and a sofa bed.",
+      "Petra studios are our largest: open-plan, with a proper dining area and a sofa bed.",
       "There's room for small families or friends travelling together, and enough space to settle in for a longer stay.",
     ],
     svg: (

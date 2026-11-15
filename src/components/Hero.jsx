@@ -14,7 +14,7 @@ function Hero() {
           Still life,<br /><em className="text-leaf-300">slow living.</em>
         </h1>
         <p className="text-[15px] text-sand leading-[1.7] mb-8 max-w-[380px] font-light">
-          Three studio apartments in Kalamata, among olive groves, with the Taygetos mountains behind them.
+          Studio apartments in Kalamata, among olive groves, with the Taygetos mountains behind them.
         </p>
         <div className="flex gap-3 flex-wrap">
           <Link to="/#studios" className="bg-leaf-300 text-leaf-950 px-6 py-3 rounded-lg text-[14px] font-medium hover:bg-leaf-400 transition-colors">

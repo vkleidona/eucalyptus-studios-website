@@ -123,7 +123,7 @@ function EnquiryForm({ defaultStudio }) {
         <input id="checkOut" type="date" required min={form.checkIn} value={form.checkOut} onChange={update('checkOut')} className={inputClass} />
       </div>
       <div>
-        <label htmlFor="studio" className={labelClass}>Studio</label>
+        <label htmlFor="studio" className={labelClass}>Kind of studio</label>
         <select id="studio" value={form.studio} onChange={update('studio')} className={inputClass}>
           {studios.map((s) => <option key={s.id}>{s.name}</option>)}
           <option>{NOT_SURE}</option>

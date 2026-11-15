@@ -16,7 +16,7 @@ npm run lint
 ## Where things live
 
 - `src/siteConfig.js`: business details (form key, email, phone, address, map location, opening date). Empty fields are hidden on the site.
-- `src/data/studios.jsx`: studio names, prices, descriptions and photos. Each studio gets its own page at `/studios/<id>`.
+- `src/data/studios.jsx`: studio names, prices, descriptions and photos. Each kind of studio gets its own page at `/studios/<id>`.
 - `src/data/amenities.js`: amenities shown on the home page and every studio page.
 - `src/index.css`: brand colours and fonts (`@theme`). Change a value there and it updates everywhere.
 - `src/components/Logo.jsx`: the logo. Fonts are self-hosted: Cormorant (logo only), EB Garamond (headings) and Commissioner (text); the last two include Greek.

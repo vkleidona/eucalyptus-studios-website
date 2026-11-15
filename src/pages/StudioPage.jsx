@@ -170,7 +170,7 @@ function StudioPage() {
       )}
 
       <section className="mt-16 mb-6">
-        <h2 className="font-serif text-[22px] text-ink mb-4">Other studios</h2>
+        <h2 className="font-serif text-[22px] text-ink mb-4">Other kinds of studio</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {others.map((s) => (
             <Link
