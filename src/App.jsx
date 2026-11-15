@@ -8,10 +8,10 @@ import Footer from './components/Footer';
 
 function TrustBar() {
   const trustItems = [
-    { icon: "ti-star", label: "4.9 avg rating" },
+    { icon: "ti-sparkles", label: "Brand-new studios" },
+    { icon: "ti-discount-check", label: "Book direct for the best rate" },
     { icon: "ti-shield-check", label: "Free cancellation" },
     { icon: "ti-wifi", label: "Fast Wi-Fi in all studios" },
-    { icon: "ti-home", label: "Fully equipped kitchenette" },
     { icon: "ti-coffee", label: "Welcome olive oil basket" },
   ];
 

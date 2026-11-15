@@ -1,9 +1,13 @@
+import siteConfig from '../siteConfig';
+
 
 function Hero() {
   return (
     <section id="top" className="bg-olive-900 px-6 md:px-12 py-20 md:py-[72px] grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[380px]">
       <div className="hero-content">
-        <p className="text-[11px] tracking-[0.12em] text-olive-300 uppercase mb-4 font-semibold">Kalamata, Greece</p>
+        <p className="text-[11px] tracking-[0.12em] text-olive-300 uppercase mb-4 font-semibold">
+          Kalamata, Greece{siteConfig.opening && <> · Opening {siteConfig.opening}</>}
+        </p>
         <h1 className="font-serif text-4xl md:text-[42px] font-normal leading-[1.15] text-cream mb-5">
           Still life,<br /><em className="text-olive-300 not-italic">slow living.</em>
         </h1>
@@ -48,11 +52,11 @@ function Hero() {
         
         <div className="flex gap-2.5 items-center bg-olive-800 rounded-lg p-[10px_14px] border border-olive-600 max-w-[280px] w-full">
           <div className="w-8 h-8 rounded-full bg-olive-300 flex items-center justify-center flex-shrink-0">
-            <i className="ti ti-star text-[14px] text-olive-900"></i>
+            <i className="ti ti-sparkles text-[14px] text-olive-900"></i>
           </div>
           <div className="text-[12px] text-sand">
-            <strong className="block text-[13px] text-cream font-medium mb-0.5">4.9 on Booking.com</strong>
-            Loved for calm, cleanliness & location
+            <strong className="block text-[13px] text-cream font-medium mb-0.5">Brand-new studios</strong>
+            {siteConfig.opening ? `Opening ${siteConfig.opening}` : 'Freshly built and designed'}
           </div>
         </div>
 

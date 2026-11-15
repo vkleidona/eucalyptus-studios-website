@@ -48,7 +48,9 @@ function Contact() {
         <p className="text-[11px] tracking-[0.12em] text-olive-500 uppercase mb-2.5 font-semibold">Book direct</p>
         <h2 className="font-serif text-[28px] font-normal text-ink">Plan your stay</h2>
         <p className="text-[15px] text-muted mt-2.5 max-w-[480px] mx-auto leading-[1.7] font-light">
-          Send us your dates and we'll get back to you with availability and the best rate.
+          {siteConfig.opening
+            ? `We open in ${siteConfig.opening.toLowerCase()}. Send us your dates and we'll be in touch as soon as bookings open.`
+            : "Send us your dates and we'll get back to you with availability and the best rate."}
         </p>
       </div>
 
