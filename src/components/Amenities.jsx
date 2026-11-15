@@ -1,14 +1,4 @@
-
-const AMENITIES_DATA = [
-  { icon: "ti-wifi", name: "High-speed Wi-Fi", desc: "Fibre throughout — work remotely in peace" },
-  { icon: "ti-tools-kitchen-2", name: "Full kitchenette", desc: "Hob, fridge, espresso machine & crockery" },
-  { icon: "ti-air-conditioning", name: "A/C & heating", desc: "Climate control for every season" },
-  { icon: "ti-car", name: "Free parking", desc: "Private on-site parking space included" },
-  { icon: "ti-leaf", name: "Local welcome gift", desc: "Kalamata olive oil, olives & local herbs" },
-  { icon: "ti-shirt", name: "Laundry access", desc: "Shared machine for stays of 3+ nights" },
-  { icon: "ti-lock-open", name: "Self check-in", desc: "Smart lock — arrive any time you like" },
-  { icon: "ti-map-2", name: "Local guide", desc: "Curated tips for Kalamata & the Mani" }
-];
+import amenities from '../data/amenities';
 
 function Amenities() {
   return (
@@ -19,7 +9,7 @@ function Amenities() {
       </div>
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-        {AMENITIES_DATA.map((item) => (
+        {amenities.map((item) => (
           <div key={item.name} className="text-center p-[20px_12px]">
             <div className="w-11 h-11 rounded-full bg-olive-50 flex items-center justify-center mx-auto mb-3">
               <i className={`ti ${item.icon} text-2xl text-olive-700`}></i>

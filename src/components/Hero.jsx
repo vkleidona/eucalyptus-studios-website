@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import siteConfig from '../siteConfig';
 
 
@@ -15,17 +16,17 @@ function Hero() {
           A collection of studio apartments in the heart of Kalamata — surrounded by olive groves, mountain air, and the unhurried pace of Messinian life.
         </p>
         <div className="flex gap-3 flex-wrap">
-          <a href="#studios" className="bg-olive-300 text-olive-950 px-6 py-3 rounded-lg text-[14px] font-medium hover:bg-olive-400 transition-colors">
+          <Link to="/#studios" className="bg-olive-300 text-olive-950 px-6 py-3 rounded-lg text-[14px] font-medium hover:bg-olive-400 transition-colors">
             Explore studios
-          </a>
-          <a href="#location" className="bg-transparent text-cream border border-olive-300 px-6 py-3 rounded-lg text-[14px] hover:bg-white/5 transition-colors">
+          </Link>
+          <Link to="/#location" className="bg-transparent text-cream border border-olive-300 px-6 py-3 rounded-lg text-[14px] hover:bg-white/5 transition-colors">
             Where we are
-          </a>
+          </Link>
         </div>
       </div>
       
       <div className="flex flex-col gap-3 items-center md:items-end w-full">
-        <div className="w-full max-w-[280px] bg-olive-800 rounded-xl overflow-hidden border border-olive-600">
+        <Link to="/studios/elia" className="block w-full max-w-[280px] bg-olive-800 rounded-xl overflow-hidden border border-olive-600 hover:border-olive-300 transition-colors">
           <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg" className="w-full h-[130px] block">
             <rect width="280" height="130" fill="#4a5e35"/>
             <rect width="280" height="70" fill="#6a7e50"/>
@@ -48,7 +49,7 @@ function Hero() {
             <p className="font-serif text-[15px] text-cream">Elia Studio Suite</p>
             <p className="text-[13px] text-sand mt-1.5">from <strong className="text-olive-300 font-semibold">€85</strong> / night</p>
           </div>
-        </div>
+        </Link>
         
         <div className="flex gap-2.5 items-center bg-olive-800 rounded-lg p-[10px_14px] border border-olive-600 max-w-[280px] w-full">
           <div className="w-8 h-8 rounded-full bg-olive-300 flex items-center justify-center flex-shrink-0">
